@@ -1,0 +1,16 @@
+{
+    "**/(apps|libs)/.(html|js|ts|jsx|tsx|json?)": [
+        "prettier --write",
+        "yarn lint:fix",
+        "yarn lint"
+    ],
+    "*.(css|scss?)": [
+        "yarn lint:styles:fix",
+        "yarn lint:styles"
+    ],
+    "package.json": [
+        "yarn format:package",
+        "prettier --write"
+    ],
+    "*": [ "yarn lint:workspace" ]
+}
